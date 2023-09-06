@@ -10,3 +10,24 @@ Trois autres méthodes seront définies :
 • afficher sa représentation en string qui affichera le nom
 du titulaire et le solde de son compte.
 """
+
+class CompteBancaire:
+    def __init__(self, nom="Dupont", solde=1000):
+        self._nom = nom
+        self._solde = solde
+
+    def deposer(self, somme):
+        if somme > 0:
+            self._solde += somme
+        else:
+            print("Vous ne pouvez ajouter une somme "
+                  "inférieur ou égal à zéro.")
+
+    def retirer(self, somme):
+        if somme >= 0:
+            self._solde -= somme
+
+    def __str__(self):
+        return f"Compte bancaire de {self._nom}.\n" \
+               f"Solde : {self._solde}."
+
