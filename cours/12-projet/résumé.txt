@@ -1,0 +1,27 @@
+Création d'un projet :
+- Définition d'un dossier (mon_projet)
+- Création de la venv :
+    python -m venv venv
+- Activation de la venv :
+    cd venv
+    cd Scripts
+    ./Activate
+- Vérification (on cherche le (venv) dans le terminal)
+
+- Création des fichiers de projets etc.
+Par exemple création d'un package :
+    Dossier mon_package
+    Ne pas oublier le fichier (vide) __init.__py
+    Créer vos modules.
+
+- Dans votre projet ne pas oublier le main.py.
+Vous pouvez lui donner le nom que vous voulez, mais il faut
+au moins un fichier .py à la racine de votre projet.
+
+- Installer des bibliothèques avec pip install
+- Freeze dans un requirements.txt : pip freeze > requirements.txt
+- Installer depuis un requirements.txt : pip install -r requirements.txt
+
+- Utiliser pyinstaller pour faire un .exe
+    pip install pyinstaller
+    pyinstaller --onefile main.py
